@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone, MessageCircle, MapPin, Mail, Clock, Scissors } from "lucide-react";
-import heroImg from "@/assets/hero-interior.jpg.asset.json";
-import aboutImg from "@/assets/about-cut.jpg.asset.json";
-import gTools from "@/assets/station-tools.jpg.asset.json";
-import gScissor from "@/assets/scissor-cut.jpg.asset.json";
-import gFade from "@/assets/fade-detail.jpg.asset.json";
-import gClipper from "@/assets/clipper-trim.jpg.asset.json";
+import heroImg from "@/assets/hero-interior.jpg";
+import aboutImg from "@/assets/about-cut.jpg";
+import gTools from "@/assets/station-tools.jpg";
+import gScissor from "@/assets/scissor-cut.jpg";
+import gFade from "@/assets/fade-detail.jpg";
+import gClipper from "@/assets/clipper-trim.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -38,12 +38,12 @@ const SERVICES = [
 ];
 
 const GALLERY = [
-  { src: gTools.url, alt: "Barber station and tools", pos: "center" },
-  { src: gScissor.url, alt: "Scissor cut in progress", pos: "center" },
-  { src: gFade.url, alt: "Close-up skin fade with clippers", pos: "center" },
-  { src: gClipper.url, alt: "Clipper work at the chair", pos: "center 30%" },
-  { src: heroImg.url, alt: "Barber shop interior with chairs", pos: "center" },
-  { src: aboutImg.url, alt: "Barber shaping a client's hair", pos: "center 20%" },
+  { src: gTools, alt: "Barber station and tools", pos: "center" },
+  { src: gScissor, alt: "Scissor cut in progress", pos: "center" },
+  { src: gFade, alt: "Close-up skin fade with clippers", pos: "center" },
+  { src: gClipper, alt: "Clipper work at the chair", pos: "center 30%" },
+  { src: heroImg, alt: "Barber shop interior with chairs", pos: "center" },
+  { src: aboutImg, alt: "Barber shaping a client's hair", pos: "center 20%" },
 ];
 
 const HOURS = [
@@ -211,7 +211,7 @@ function Hero() {
   return (
     <section className="relative min-h-[100svh] w-full overflow-hidden bg-background">
       <img
-        src={heroImg.url}
+        src={heroImg}
         alt="Interior of Crown & Blade barbershop"
         className="absolute inset-0 h-full w-full object-cover"
         style={{ objectPosition: "center" }}
@@ -309,7 +309,7 @@ function About() {
             </p>
           </div>
         </div>
-        <Photo src={aboutImg.url} alt="Barber cutting a client's hair" className="aspect-[4/5]" pos="center 25%" />
+        <Photo src={aboutImg} alt="Barber cutting a client's hair" className="aspect-[4/5]" pos="center 25%" />
       </div>
     </section>
   );
